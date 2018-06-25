@@ -29,6 +29,7 @@ public:
                va_copy(next_va,args);
                for(int i=1; i<d; i++)
                     multiplier*=va_arg(args,int);
+               va_end(args);
                nextD.initialize(begin_ptr,next_va);
           }
 
